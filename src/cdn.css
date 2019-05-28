@@ -15,33 +15,29 @@ http://creativecommons.org/licenses/by/3.0/
 ------------------------------------------------*/
 body {
   font-family: 'Open Sans', sans-serif;
+  background: #f3f3f3;
 }
 
 #wrapper {
   width: 100%;
-  background: #2b2e33;
+  /* background: #2b2e33; */
 }
 
 #page-wrapper {
-  padding: 15px 15px;
-  min-height: 600px;
-  background: #f3f3f3;
+  margin: 0 0 0 260px;
+  padding: 15px 30px;
+  /* min-height: 600px; */
+  /* background: #f3f3f3; */
  
 }
-#page-inner {
-  width:100%;
-  margin:10px 20px 10px 0px;
-  background-color:transparent;
-  padding:10px;
-  min-height:1200px;
-}
+
 
 .text-center {
   text-align:center;
 }
-.no-boder {
+/* .no-boder {
   border:1px solid #f3f3f3;
-}
+} */
 
 h1, .h1, h2, .h2, h3, .h3 {
 margin-top: 7px;
@@ -86,7 +82,10 @@ box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
 z-index: 1;
 position: fixed;
 width: 260px;
-top: 80px;
+top: 60px;
+bottom: 0;
+overflow-y: auto;
+background: #2b2e33;
 }
 #page-wrapper {
 position: relative;
@@ -174,7 +173,7 @@ margin: 0 15px 10px 0;
 width: 70px;
 height: 70px;
 line-height: 75px;
-vertical-align: middle;
+/* vertical-align: middle; */
 text-align: center;
 font-size: 40px;
 }
@@ -225,7 +224,7 @@ margin: 0 15px 10px 0;
 width: 70px;
 height: 70px;
 line-height: 75px;
-vertical-align: middle;
+/* vertical-align: middle; */
 text-align: center;
 font-size: 40px;
 }
@@ -369,6 +368,10 @@ display: inline-block;
 margin: 0px;
 padding: 0px;
 }
+.top-navbar .nav > li:hover .dropdown-menu{
+  cursor: pointer;
+  display: block;
+}
 .top-navbar .nav > li > a {
 position: relative;
 display: block;
@@ -469,7 +472,7 @@ outline:0;
 
 .navbar-side {
 border:none;
-background-color: transparent;
+/* background-color: transparent; */
 
 }
 .top-navbar {
@@ -528,23 +531,31 @@ line-height: 1.428571429;
   MEDIA QUERIES     
 ------------------------------------------------*/
 
-@media(min-width:768px) {
-   #page-wrapper{
-             margin: 0 0 0 260px;
-      padding: 15px 30px;
-      
-             min-height: 1200px;
-  
+@media(max-width:768px) {
+  .top-navbar{
+    position: relative;
   }
+  .top-navbar .navbar-brand{
+    width: 100%;
+  }
+   
 
 
   .navbar-side {
       z-index: 1;
-      width: 260px;
+      top: 0;
+      width: 100%;
   }
 
  .navbar {
 border-radius: 0px; 
+}
+#page-wrapper{
+  margin: 0;
+  top: 0;
+padding: 15px 30px;
+
+
 }
  
 }
@@ -556,3 +567,10 @@ font-size: 19px;
 }
 }
 
+.fa{
+  margin-right: 6px !important;
+  display: inline;
+}
+.fa > span{
+  margin-left: 6px;
+}

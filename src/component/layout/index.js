@@ -1,4 +1,7 @@
 import React from 'react'
+import TopNav from '../top-nav'
+import SideNav from '../side-nav'
+
 
 
 class Layout extends React.Component{
@@ -8,6 +11,8 @@ class Layout extends React.Component{
   render() {
     return (
       <div id="wrapper">
+        <TopNav />
+        <SideNav />
         {
           this.props.children
         }
